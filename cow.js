@@ -20,6 +20,13 @@ window.addEventListener("load", () => {
 
   // 特定のクラスを持つ要素を非表示にする
   hideElementsByClass(targetClass);
+
+   // タブがアクティブになった際にリロードする
+   document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible") {
+      location.reload();
+    }
+  });
 });
 
 const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
