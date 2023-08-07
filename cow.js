@@ -5,6 +5,23 @@
 //
 //  WTFPL. Good Luck.
 
+// 特定のクラス名
+const targetClass = "supplement";
+
+// コンテンツが読み込まれたら実行
+window.addEventListener("load", () => {
+  // 特定のクラスを持つ要素を非表示にする関数
+  function hideElementsByClass(className) {
+    const elements = document.getElementsByClassName(className);
+    for (const element of elements) {
+      element.style.display = "none";
+    }
+  }
+
+  // 特定のクラスを持つ要素を非表示にする
+  hideElementsByClass(targetClass);
+});
+
 const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
 
 window.onload = function() {
@@ -67,3 +84,4 @@ function next() {
 
     caps[lastIndex].querySelector("a").click()
 }
+
