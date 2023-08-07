@@ -1,7 +1,7 @@
 {
   "name": "COW",
   "version": "0.0.0",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "description": "N予備校自動再生ツール",
   "content_scripts": [{
     "matches": ["https://www.nnn.ed.nico/courses/*"],
